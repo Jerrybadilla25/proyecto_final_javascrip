@@ -44,7 +44,45 @@ var calculadora = {
         this.actualizarpantalla();
     },
 
+    borrarPantalla: function(){
+        this.valorpantalla="0";
+        this.valor1="0";
+        this.valor2="0";
+        this.resultadoFinal="0";
+        this.ultimoValor="0";
+        this.actualizarpantalla();
+    },
+
+
+    cambiarSigno: function(){
+        if(this.valorpantalla !="0"){
+            var salida;
+            if(this.valorpantalla.charAt(0)=="0"){
+                salida=this.valorpantalla.slice(1);
+            } else{
+                salida="-"+this.valorpantalla;
+            }
+            this.valorpantalla="";
+            this.valorpantalla="salida";
+            this.actualizarpantalla();
+        }
+    },
+
+    ingresarPunto: function(){
+        if(this.valorpantalla.indexOf(".")== -1){
+            if(this.valorpantalla == ""){
+               this.valorpantalla=this.valorpantalla+"0";              
+            }else{
+                this.valorpantalla=this.valorpantalla+"-";
+            }
+            this.actualizarpantalla();
+        }
+        },
+        
     
+
+
+
 
 
 
