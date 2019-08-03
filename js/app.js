@@ -6,6 +6,7 @@ var calculadora = {
     valor2 ="0",
     ultimoValor ="0",
     resultadoFinal ="0",
+    operando="",
 
     init: (function(){
         this.eventosFunciones();
@@ -78,22 +79,25 @@ var calculadora = {
             this.actualizarpantalla();
         }
         },
-        
     
+    operaciones: function(valor1,valor2,operando){
+        switch(operando){
+        case "+":this.resultadoFinal=eval(valor1+valor2);break;
+        case "-":this.resultadoFinal=eval(valor1-valor2);break;
+        case "*":this.resultadoFinal=eval(valor1*valor2);break;
+        case "/":this.resultadoFinal=eval(valor1/valor2);break;
+    }
+    },
 
+    actualizarpantalla: function(){
+        this.pantalla.innerHTML=this.valorpantalla;
+    }
+    
+    
+    
+//pendiente efecto botones
 
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-}
+calculadora.init();
 
