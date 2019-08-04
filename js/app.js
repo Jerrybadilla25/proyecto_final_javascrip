@@ -10,6 +10,7 @@ var calculadora = {
 
     init: (function(){
         this.eventosFunciones();
+        
     }),
 
 
